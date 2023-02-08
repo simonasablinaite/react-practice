@@ -39,5 +39,15 @@
 
 /* klasiu kurimas: */
 .dog {
-  letter-spacing: 5px;
+  font-size: 50px;
+  color: rgb(22, 185, 22);
+}
+
+.cat {
+  font-size: 100px;
+  color: rgb(4, 4, 189);
+}
+
+h2.h2 {
+  font-size: 100px;
 }
