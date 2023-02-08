@@ -21,9 +21,9 @@ function App() {
                }
             </ul> */}
             <div className="container">
-               <Cat catName='Marsas' />
-               <Cat catName='Balte' />
-               <Cat catName='Snikersas' />
+               <Cat catName='Marsas' weight='13' />
+               <Cat catName='Balte' weight='4' />
+               <Cat catName='Snikersas' weight='7' />
             </div>
 
          </header>
