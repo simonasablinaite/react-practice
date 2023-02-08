@@ -1,27 +1,34 @@
 import './App.css';
+import Cat from './Components/004/Cata';
 
 // Masyvas savyje turintis objektus - bene dazniausio duomenu tipo uzduotys, kurias atlikineja reactas
-const cats = [
-   {id: 1, weight: 5, name: 'Pukis'},
-   {id: 2, weight: 3, name: 'Baltis'},
-   {id: 3, weight: 2, name: 'Murka'},
-   {id: 4, weight: 7, name: 'Pilke'},
-   {id: 5, weight: 4, name: 'Juodis'},
-]
+// const cats = [
+//    {id: 1, weight: 5, name: 'Pukis'},
+//    {id: 2, weight: 3, name: 'Baltis'},
+//    {id: 3, weight: 2, name: 'Murka'},
+//    {id: 4, weight: 7, name: 'Pilke'},
+//    {id: 5, weight: 4, name: 'Juodis'},
+// ]
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
+   return (
+      <div className="App">
+         <header className="App-header">
             <h1>List</h1>
-            <ul>
+            {/* <ul>
                {
                   [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => <li key={cat.id}>{cat.name}</li>)
                }
-            </ul>
-      </header>
-    </div>
-  );
+            </ul> */}
+            <div className="container">
+               <Cat catName='Marsas' />
+               <Cat catName='Balte' />
+               <Cat catName='Snikersas' />
+            </div>
+
+         </header>
+      </div>
+   );
 }
 
 export default App;
@@ -42,3 +49,6 @@ Isrusiuoti katinus pagal varda abeceles tvarka:
 
 [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => <li key={cat.id}>{cat.name}</li>)
 */
+
+
+// catName yra propsas, kuris iseina
