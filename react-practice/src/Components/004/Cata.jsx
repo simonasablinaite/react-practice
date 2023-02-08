@@ -1,6 +1,6 @@
-function Cat(props) {
+function Cat({ catName }) {
    return (
-      <div>{props.catName}</div>
+      <div>{catName}</div>
    )
 }
 
