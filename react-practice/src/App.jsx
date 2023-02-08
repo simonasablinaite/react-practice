@@ -1,13 +1,14 @@
 import './App.css';
+import Cat from './Components/003/Cat';
 import Dog from './Components/003/Dog';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <Dog />
+      {/* <Dog /> */}
         <h1>START</h1>
-      <Dog />
+      <Cat />
       </header>
     </div>
   );
