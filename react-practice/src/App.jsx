@@ -16,10 +16,7 @@ function App() {
             <h1>List</h1>
             <ul>
                {
-                  // react'as sumapins cats masyva ir i li elementa sudes katinu vardus. Gausime katinu vardu nerusiuota sarasa
-                  cats.map(cat => <li key={cat.id}>{cat.name}</li>)
-                  // kaip key galima naudoti ir indeksa, jis taip pat yra unikalus. Kodas atrodytu taip:
-                  // cats.map((cat, i) => <li key={i}>{cat.name}</li>)
+                  [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => <li key={cat.id}>{cat.name}</li>)
                }
             </ul>
       </header>
@@ -28,3 +25,20 @@ function App() {
 }
 
 export default App;
+
+// react'as sumapins cats masyva ir i li elementa sudes katinu vardus. Gausime katinu vardu nerusiuota sarasa;
+
+// kaip key galima naudoti ir indeksa, jis taip pat yra unikalus. Kodas atrodytu taip:
+// cats.map((cat, i) => <li key={i}>{cat.name}</li>)
+
+/* UZDUOTIS Nr.1:
+Itraukti katinu svori ir isrusiuoti nuo sunkiausio iki lengviausio:
+
+  [...cats].sort((a, b) => b.weight - a.weight).map((cat, i) => <li key={i}>{cat.name}{' ' + cat.weight}kg</li>)
+*/
+
+/* UZDUOTIS Nr.2:
+Isrusiuoti katinus pagal varda abeceles tvarka:
+
+[...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => <li key={cat.id}>{cat.name}</li>)
+*/
