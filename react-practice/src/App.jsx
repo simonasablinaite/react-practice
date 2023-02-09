@@ -1,5 +1,8 @@
 import './App.css';
 import Cat from './Components/004/Cat';
+import randColor from './Functions/randColor';
+
+
 
 // Masyvas savyje turintis objektus - bene dazniausio duomenu tipo uzduotys, kurias atlikineja reactas
 const cats = [
@@ -25,6 +28,12 @@ function App() {
                <Cat catName='Balte' weight='4' />
                <Cat catName='Snikersas' weight='7' /> */}
             </div>
+
+            <h1>
+               {
+                  [...'Dinozauras'].map((l, i) => <span key={i} style={{ color: randColor() }}>{l}</span>)
+               }
+            </h1>
 
          </header>
       </div>
@@ -54,5 +63,15 @@ Isrusiuoti katinus pagal varda abeceles tvarka:
 UZDUOTIS Nr.3:
 Jei katino svoris > nei 4kg, to katino nerodyti:
 [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat, i) => cat.weight > 4 ? null : < Cat i={i} key={cat.id} cat={cat} />)
+*/
+
+/*
+UZDUOTIS Nr.4:
+Zodzio 'Dinozauras' kiekviena raide padaryti atskiros random spalvos:
+<h1>
+               {
+                  [...'Dinozauras'].map((l, i) => <span key={i} style={{ color: randColor() }}>{l}</span>)
+               }
+            </h1>
 */
 // catName yra propsas, kuris iseina
