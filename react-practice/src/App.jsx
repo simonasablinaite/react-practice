@@ -17,7 +17,7 @@ function App() {
             <h1>List</h1>
             <div className='container'>
                {
-                  [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat, i) => <Cat i={i} key={cat.id} cat={cat} />)
+                  [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat, i) => cat.weight > 4 ? null : < Cat i={i} key={cat.id} cat={cat} />) //Cat yra komponentas Cat.jsx, key={cat.id} yra PRIVALOMAS, nesikartojantis propsas, o cat={cat} - tai vienas katinas perduodamas vienam katinuin (cat), esanciam komponente Cat
                }
             </div>
             <div className="container">
@@ -50,5 +50,9 @@ Isrusiuoti katinus pagal varda abeceles tvarka:
 [...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat) => <li key={cat.id}>{cat.name}</li>)
 */
 
-
+/*
+UZDUOTIS Nr.3:
+Jei katino svoris > nei 4kg, to katino nerodyti:
+[...cats].sort((a, b) => a.name.localeCompare(b.name)).map((cat, i) => cat.weight > 4 ? null : < Cat i={i} key={cat.id} cat={cat} />)
+*/
 // catName yra propsas, kuris iseina
