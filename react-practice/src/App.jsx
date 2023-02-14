@@ -24,13 +24,11 @@ function App() {
 export default App;
 
 /* Mygtuko veikimo principas:
-Mygtukui nurodomas eventas "onClick" ir i jo vidu paduodama funkcija, ka ,ygtukas turi daryti, ji paspaudus.
-Reikia buti susikurus paduotaja f-ja, kuri siuo atveju yra "clicked". 
-Tai rei6kia, kad paspaudus mygtuka, konsole turi isspausdinti zodi 'Labas'
+Mygtukui nurodomas eventas "onClick" ir i jo vidu paduodama nuoroda i funkcija, ka ,mygtukas turi daryti, ji paspaudus.
+Reikia buti susikurus paduodamaja f-ja, kuri siuo atveju yra "clicked". 
+Tai reiskia, kad paspaudus mygtuka, konsole turi isspausdinti zodi 'Labas';
 
 Galima funkcijai "clicked" nurodyti vykdyti kita f-ja, pvz, "doJob":
 Sukuriamas naujas componentas f-jai doJob -> ja paduodame f-jai clicked -> paspaudus mygtuka, bus iskviesta doJob f-ja
-
-
 
 */
